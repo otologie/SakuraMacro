@@ -1,8 +1,8 @@
-// ƒ_ƒCƒAƒƒO
-var a = Editor.InputBox("‰¹’ö (-11~11)","0",3);
+// ãƒ€ã‚¤ã‚¢ãƒ­ã‚°
+var a = Editor.InputBox("éŸ³ç¨‹ (-11~11)","0",3);
 
 if (a>0 && a<12|| a<0 && a>-12) {
-// ‘I‘ğ‚µ‚Ä‚¢‚éƒeƒLƒXƒg‚ğæ“¾
+// é¸æŠã—ã¦ã„ã‚‹ãƒ†ã‚­ã‚¹ãƒˆã‚’å–å¾—
 var text = Editor.GetSelectedString(0);
 
 Editor.InsText(chordkeychange(text));
@@ -28,12 +28,12 @@ mchord[11] = "G#|Ab";
 var chord = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
 
 
-// ”’l‚É’u‚«Š·‚¦
+// æ•°å€¤ã«ç½®ãæ›ãˆ
 for (var i=0; i<12; i++) {
 	text = text.replace(new RegExp(mchord[i],"g"), "h" + i);
 }
 
-// ƒR[ƒh–¼‚É’u‚«Š·‚¦
+// ã‚³ãƒ¼ãƒ‰åã«ç½®ãæ›ãˆ
 for (var i=10; i<12; i++) {
 	var ii=i+Number(a);
 	if (ii<0) ii=ii+12;
