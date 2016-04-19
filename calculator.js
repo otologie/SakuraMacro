@@ -3,7 +3,7 @@ var bfm = "", bk = 7;
 
 
 while (bk == 7) {
-var text = Editor.Inputbox("ŒvZ®", bfm, 200);
+var text = Editor.Inputbox("è¨ˆç®—å¼", bfm, 200);
 
 if (text != "") {
 
