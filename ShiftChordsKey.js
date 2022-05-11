@@ -3,7 +3,7 @@ var a = Editor.InputBox("Interval (-11~11)","0",3);
 
 if (a>0 && a<12|| a<0 && a>-12) {
 
-// Get selected text
+	// Get selected text
 	var text = Editor.GetSelectedString(0);
 
 	Editor.InsText(ChangeKeys(text));
@@ -12,6 +12,7 @@ if (a>0 && a<12|| a<0 && a>-12) {
 
 function ChangeKeys(text) {
 
+	// Contain the mached chord names
 	var mchord = new Array(11);
 	mchord[0] = "A(?!#|b)";
 	mchord[1] = "A#|Bb";
@@ -29,12 +30,12 @@ function ChangeKeys(text) {
 	var chord = ["A", "Bb", "B", "C", "C#", "D", "Eb", "E", "F", "F#", "G", "G#"];
 
 
-// Exchange to numbers
+	// Exchange to numbers
 	for (var i=0; i<12; i++) {
 		text = text.replace(new RegExp(mchord[i],"g"), "h" + i);
 	}
 
-// Exchange to chord names
+	// Replace to chord names
 	for (var i=10; i<12; i++) {
 		var ii=i+Number(a);
 		if (ii<0) ii=ii+12;
