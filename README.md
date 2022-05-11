@@ -1,15 +1,15 @@
 # sakuramacro
 
--サクラエディタのマクロ。
+-Sakura Editor's Macro.
 
 
-changechordskey.js
+ShiftChordsKey.js
 
--選択されたテキストのギターなどのコードのキーを変更。
+-Shift the interval of selected chords key.
 
 
-calculator.js
+Calculator.js
 
--計算式で計算。
+-Line Calculator.
 
 
