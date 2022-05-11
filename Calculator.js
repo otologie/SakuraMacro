@@ -3,7 +3,7 @@ var bfm = "", bk = 7;
 
 
 while (bk == 7) {
-var text = Editor.Inputbox("計算式", bfm, 200);
+var text = Editor.Inputbox("Expression", bfm, 200);
 
 if (text != "") {
 
