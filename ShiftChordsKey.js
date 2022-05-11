@@ -6,7 +6,7 @@ if (a>0 && a<12|| a<0 && a>-12) {
 // Get selected text
 	var text = Editor.GetSelectedString(0);
 
-	Editor.InsText(chordkeychange(text));
+	Editor.InsText(ChangeKeys(text));
 }
 
 
