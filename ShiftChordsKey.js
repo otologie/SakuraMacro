@@ -1,53 +1,50 @@
-// Dialog
+// Show input box
 var a = Editor.InputBox("Interval (-11~11)","0",3);
 
-if (a>0 && a<12|| a<0 && a>-12) {
-
-	// Get selected text
+// Get selected text
+if (a>0 && a<12 || a<0 && a>-12) {
 	var text = Editor.GetSelectedString(0);
-
-	Editor.InsText(ChangeKeys(text));
+	Editor.InsText(changeKey(text));
 }
 
 
-function ChangeKeys(text) {
+function changeKey(text) {
 
-	// Contain the mached chord names
-	var mchord = new Array(11);
-	mchord[0] = "A(?!#|b)";
-	mchord[1] = "A#|Bb";
-	mchord[2] = "B(?!b)";
-	mchord[3] = "C(?!#)";
-	mchord[4] = "C#|Db";
-	mchord[5] = "D(?!#|b)";
-	mchord[6] = "D#|Eb";
-	mchord[7] = "E(?!b)";
-	mchord[8] = "F(?!#)";
-	mchord[9] = "F#|Gb";
-	mchord[10] = "G(?!#|b)";
-	mchord[11] = "G#|Ab";
+	// Conditions of RegExp
+	var clause = new Array(11);
+	clause[0] = "A(?!#|b)";
+	clause[1] = "A#|Bb";
+	clause[2] = "B(?!b)";
+	clause[3] = "C(?!#)";
+	clause[4] = "C#|Db";
+	clause[5] = "D(?!#|b)";
+	clause[6] = "D#|Eb";
+	clause[7] = "E(?!b)";
+	clause[8] = "F(?!#)";
+	clause[9] = "F#|Gb";
+	clause[10] = "G(?!#|b)";
+	clause[11] = "G#|Ab";
 
-	var chord = ["A", "Bb", "B", "C", "C#", "D", "Eb", "E", "F", "F#", "G", "G#"];
+	var chordName = ["A", "Bb", "B", "C", "C#", "D", "Eb", "E", "F", "F#", "G", "G#"];
 
-
-	// Exchange to numbers
+	// Match every chords
 	for (var i=0; i<12; i++) {
-		text = text.replace(new RegExp(mchord[i],"g"), "h" + i);
+		text = text.replace(new RegExp(clause[i],"g"), "h" + i);
 	}
 
-	// Replace to chord names
+	// Shift chords
 	for (var i=10; i<12; i++) {
-		var ii=i+Number(a);
-		if (ii<0) ii=ii+12;
-		if (ii>11) ii=ii-12;
-		text = text.replace(new RegExp("h" + i,"g"), chord[ii]);
+		var ii = i + Number(a);
+		if (ii<0) ii = ii+12;
+		if (ii>11) ii = ii-12;
+		text = text.replace(new RegExp("h" + i,"g"), chordName[ii]);
 	}
 
 	for (var i=0; i<10; i++) {
-		var ii=i+Number(a);
-		if (ii<0) ii=ii+12;
-		if (ii>11) ii=ii-12;
-		text = text.replace(new RegExp("h" + i,"g"), chord[ii]);
+		var ii = i + Number(a);
+		if (ii<0) ii = ii+12;
+		if (ii>11) ii = ii-12;
+		text = text.replace(new RegExp("h" + i,"g"), chordName[ii]);
 	}
 
 	return text;
