@@ -9,7 +9,7 @@ var text = Editor.Inputbox("Expression", line, 200);
 if (text != "") {
 	// Result
 	var answer = eval(text);
-	end = Editor.MessageBox(answer, "4");
+	end = Editor.MessageBox(answer, 4);
 
 	if (end == 7) line = text;
 }
