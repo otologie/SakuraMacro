@@ -1,21 +1,21 @@
 
-var bfm = "", bk = 7;
+// Return value of MessageBox, 7 = "No", 6 = "Yes"
+var line = "", end = 7;
 
 
-while (bk == 7) {
-var text = Editor.Inputbox("Expression", bfm, 200);
+while (end == 7) {
+var text = Editor.Inputbox("Expression", line, 200);
 
 if (text != "") {
+	// Result
+	var answer = eval(text);
+	end = Editor.MessageBox(answer, "4");
 
-	var ans = eval(text);
-
-	bk = Editor.MessageBox( ans,"4");
-
-	if (bk == 7) bfm = text;
+	if (end == 7) line = text;
 }
 
-else bk = 6;
+// Empty
+else end = 6;
 
 }
-
 
