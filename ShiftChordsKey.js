@@ -27,7 +27,7 @@ function changeKey(text) {
 
 	var chordName = ["A", "Bb", "B", "C", "C#", "D", "Eb", "E", "F", "F#", "G", "G#"];
 
-	// Match every chords
+	// Match every chord
 	for (var i=0; i<12; i++) {
 		text = text.replace(new RegExp(clause[i],"g"), "h" + i);
 	}
