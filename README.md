@@ -3,13 +3,12 @@
 Sakura Editor's Macro.
 
 
-## ShiftChordsKey.js
+## ShiftChordNames.js
 
-Shift the interval of selected chords key.
+Shift the musical key of selected chords.
 
 
-## Calculator.js
+## LineCalculator.js
 
-Line Calculator.
-
+One line calculator as JavaScript do.
 
