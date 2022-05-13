@@ -7,7 +7,6 @@ if (a>0 && a<12 || a<0 && a>-12) {
 	Editor.InsText(changeKey(text));
 }
 
-
 function changeKey(text) {
 
 	// Conditions of RegExp
@@ -49,4 +48,3 @@ function changeKey(text) {
 
 	return text;
 }
-
