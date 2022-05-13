@@ -2,13 +2,21 @@
 
 Sakura Editor's Macro.
 
+https://sakura-editor.github.io/
 
-## ShiftChordNames.js
+### ShiftChordNames.js
 
-Shift the musical key of selected chords.
+Shift the selected chord names.
 
-
-## LineCalculator.js
+### LineCalculator.js
 
 One line calculator as JavaScript do.
+
+### TimePlus.js
+
+Sum of now and while.
+
+### TimeWhile.js
+
+While now to last.
 
